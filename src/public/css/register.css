@@ -1,0 +1,81 @@
+.header {
+    background: #fff;
+}
+
+.header_inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header_logo {
+    color: brown;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.header_login {
+    margin: 0 auto;
+    text-align: right;
+}
+
+.contact-form {
+    margin: 0 auto;
+    padding: 30px 15px;
+    max-width: 1230px;
+    background-color: brown;
+}
+
+.contact-form_heading {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.form {
+    margin: 0 auto;
+    width: 70%;
+    text-align: center;
+    background-color: #fff;
+}
+
+.form_group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+
+.form_group-titel {
+    margin-left: 5px;
+    padding: 4px 6px;
+}
+
+.form_group-content {
+    margin-left: 5px;
+    padding: 4px 6px;
+}
+
+.from_error {
+    height: 20px;
+    color: #ff0000;
+    text-align: left;
+}
+
+.form_input-text {
+    height: 40px;
+}
+
+.form_button {
+    margin-top: 30px;
+}
+
+.form_button-submit {
+    padding: 10px;
+    width: 30%;
+    height: 50px;
+    border: none;
+    border-radius: 3px;
+    background: brown;
+    color: #fff;
+    cursor: pointer;
+}
