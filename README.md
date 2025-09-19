@@ -15,7 +15,11 @@ Laravel環境構築
 
 ## 使用技術  
 PHP 8.1.33  
+<<<<<<< HEAD
 Laravel 8.83.8  
+=======
+Laravel  8.83.8
+>>>>>>> d59a63b (Add Laravel project files, ignore MySQL data)
 MySQL 8.0.26  
 
 ## ER図  

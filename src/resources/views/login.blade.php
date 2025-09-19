@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FashionablyLate</title>
     <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}" />
-    <link rel="stylesheet" href="../css/Login.css">
+    <link rel="stylesheet" href="{{ asset('css/login.css') }}" />
 
 </head>
 
@@ -17,7 +17,7 @@
             <a class="header_logo" href="/">FashionablyLate</a>
         </div>
         <div class="header_login">
-            <button class="hesder_register-submit" type="submit">
+            <button class="header_register-submit" type="submit">
                 register
             </button>
         </div>
@@ -26,12 +26,12 @@
     <main>
         <div class="login-form">
             <div class="login-form_heading">
-                <h3>Register</h3>
+                <h3>Login</h3>
             </div>
             <form class="form">
                 <div class="form_group">
-                    <div class="form_group-titel">
-                        <span class="form_group-titel">メールアドレス</span>
+                    <div class="form_group-title">
+                        <span class="form_group-title">メールアドレス</span>
                     </div>
                     <div class="form_group-content">
                         <div class="form_input-text">
@@ -43,8 +43,8 @@
                     </div>
                 </div>
                 <div class="form_group">
-                    <div class="form_group-titel">
-                        <span class="form_group-titel">パスワード</span>
+                    <div class="form_group-title">
+                        <span class="form_group-title">パスワード</span>
                     </div>
                     <div class="form_group-content">
                         <div class="form_input-text">

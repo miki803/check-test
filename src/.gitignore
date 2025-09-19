@@ -13,3 +13,5 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
+# MySQL container data (ignore all database files)
+docker/mysql/data/

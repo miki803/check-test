@@ -1,68 +1,83 @@
 .header {
-    background: #fff;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
 }
 
 .header_inner {
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 15px 40px;
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
 .header_logo {
-    color: brown;
+    color: #333;
     text-decoration: none;
     font-weight: bold;
+    font-family: "Playfair Display", serif;
     font-size: 24px;
 }
 
-.header_login {
-    margin: 0 auto;
-    text-align: right;
+main {
+    background-color: #e9e4df;
 }
 
 .contact-form {
-    margin: 0 auto;
+    display: block;
+    margin: auto;
     padding: 30px 15px;
     max-width: 1230px;
-    background-color: brown;
 }
 
 .contact-form_heading {
     margin-bottom: 40px;
     text-align: center;
+    font-family: "Playfair Display", serif;
 }
 
 .form {
-    margin: 0 auto;
+    margin: auto;
     width: 70%;
     text-align: center;
     background-color: #fff;
 }
 
 .form_group {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 100px;
+    font-size: 20px;
+    margin-bottom: 30px;
+
 }
 
-.form_group-titel {
-    margin-left: 5px;
-    padding: 4px 6px;
+.form_group-title {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+
 }
 
-.form_group-content {
-    margin-left: 5px;
-    padding: 4px 6px;
-}
-
-.from_error {
-    height: 20px;
-    color: #ff0000;
+.group-title {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 14px;
     text-align: left;
 }
 
-.form_input-text {
-    height: 40px;
+.form_input-text input {
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.form_error {
+    height: 20px;
+    color: #ff0000;
+    text-align: left;
 }
 
 .form_button {
@@ -70,12 +85,11 @@
 }
 
 .form_button-submit {
-    padding: 10px;
-    width: 30%;
+    width: 20%;
     height: 50px;
-    border: none;
-    border-radius: 3px;
-    background: brown;
+    font-size: 16px;
+    background-color: #3a2d24;
     color: #fff;
+    border: none;
     cursor: pointer;
 }

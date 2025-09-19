@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FashionablyLate</title>
-    <link rel="stylesheet" href="../css/Admin.css">
+    <link rel="stylesheet" href="{{ asset('css/admin.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}" />
 </head>
 <body>
@@ -14,7 +14,7 @@
             <a class="header_logo" href="/">FashionablyLate</a>
         </div>
         <div class="header_logout">
-            <button class="hesder_logout-submit" type="submit">
+            <button class="header_logout-submit" type="submit">
                 logout
             </button>
         </div>
