@@ -14,8 +14,8 @@ Laravel環境構築
 6.php aritsan db:seed  
 
 ## 使用技術  
-PHP 8.2.27  
-Laravel   
+PHP 8.1.33  
+Laravel 8.83.8  
 MySQL 8.0.26  
 
 ## ER図  
