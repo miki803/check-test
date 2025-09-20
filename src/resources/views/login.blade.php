@@ -17,9 +17,9 @@
             <a class="header_logo" href="/">FashionablyLate</a>
         </div>
         <div class="header_login">
-            <button class="header_register-submit" type="submit">
+            <a class="header_register-submit" href="{{ route('register') }}" >
                 register
-            </button>
+            </a>
         </div>
     </header>
 
@@ -28,7 +28,8 @@
             <div class="login-form_heading">
                 <h3>Login</h3>
             </div>
-            <form class="form">
+            <form class="form" method="POST" action="{{ route('login') }}">
+                @csrf
                 <div class="form_group">
                     <div class="form_group-title">
                         <span class="form_group-title">メールアドレス</span>
@@ -37,9 +38,9 @@
                         <div class="form_input-text">
                             <input type="email" name="email" placeholder="test@example.com" />
                         </div>
-                        <div class="form_error">
-                            <!--バリデーション機能を実装したら記述します。-->
-                        </div>
+                        @error('email')
+                        <div class="form_error">{{$message}}</div>
+                        @enderror
                     </div>
                 </div>
                 <div class="form_group">
@@ -48,11 +49,11 @@
                     </div>
                     <div class="form_group-content">
                         <div class="form_input-text">
-                            <input type="text" name="password" placeholder="パスワード" />
+                            <input type="password" name="password" placeholder="パスワード" />
                         </div>
-                        <div class="form_error">
-                            <!--バリデーション機能を実装したら記述します。-->
-                        </div>
+                        @error('password')
+                        <div class="form_error">{{$message}}</div>
+                        @enderror
                     </div>
                 </div>
                 <div class="form_button">

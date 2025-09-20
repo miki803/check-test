@@ -21,8 +21,19 @@
             <div class="confirm-form_heading">
                 <h2>Confirm</h2>
             </div>
-            <form class="form" action="/contacts/confirm" method="post">
+            <form class="form" action="{{ route('contact.send') }}" method="post">
                 @csrf
+                <!-- 隠しフィールドで値を送信 -->
+                <input type="hidden" name="first_name" value="{{ $contact['first_name'] }}">
+                <input type="hidden" name="last_name" value="{{ $contact['last_name'] }}">
+                <input type="hidden" name="gender" value="{{ $contact['gender'] }}">
+                <input type="hidden" name="email" value="{{ $contact['email'] }}">
+                <input type="hidden" name="tel" value="{{ $contact['tel'] }}">
+                <input type="hidden" name="address" value="{{ $contact['address'] }}">
+                <input type="hidden" name="building" value="{{ $contact['building'] }}">
+                <input type="hidden" name="category" value="{{ $contact['category'] }}">
+                <input type="hidden" name="message" value="{{ $contact['message'] }}">
+
                 <div class="confirm-table">
                     <table class="confirm-table_inner">
                         <tr class="confirm-table_row">
@@ -78,10 +89,10 @@
                         </tr>
                     </table>
                 </div>
-                <div class="form_button">
 
+                <div class="form_button">
                     <button class="form_button-submit" type="submit">送信</button>
-                    <button class="form_button-submit" type="button">修正</button>
+                    <a href="{{ route('contact') }}" class="form_button-submit" >修正</a>
                 </div>
             </form>
         </div>

@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+
 use Illuminate\Http\Request;
+use App\Models\Contact;
 
 class ContactController extends Controller
 {
@@ -31,17 +33,33 @@ class ContactController extends Controller
             'last_name' => 'required',
             'gender' => 'required',
             'email' => 'required|email',
-            'tel' => 'required|max:4',
+            'tel' => 'required',
             'address' => 'required',
-            'building' => 'required',
+            'building' => 'nullable',
             'category' => 'required',
             'message' => 'required|max:120',
         ]);
 
         return view('confirm', ['contact' => $validated] );
+    }
 
-       return view('thanks');
+    public function store(Request $request)
+    {
+        $validated = $request->validate([
+            'first_name' => 'required',
+            'last_name' => 'required',
+            'gender' => 'required',
+            'email' => 'required|email',
+            'tel' => 'required',
+            'address' => 'required',
+            'building' => 'nullable',
+            'category' => 'required',
+            'message' => 'required|max:120',
+        ]);
 
+        Contact::create($validated);
+
+        return redirect()->route('thanks');
     }
 
 

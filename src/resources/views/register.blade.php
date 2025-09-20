@@ -18,9 +18,9 @@
             </a>
         </div>
         <div class="header_login">
-            <button class="header_login-submit" type="submit">
+            <a class="header_login-submit" href="{{ route('login') }}" >
                 login
-            </button>
+            </a>
         </div>
     </header>
 
@@ -29,7 +29,8 @@
             <div class="contact-form_heading">
                 <h2>Register</h2>
             </div>
-            <form class="form">
+            <form class="form" method="POST" action="{{ route('register') }}">
+                @csrf
                 <div class="form_group">
                     <div class="form_group-title">
                         <span class="group-title">お名前</span>
@@ -38,9 +39,9 @@
                         <div class="form_input-text">
                             <input type="text" name="name" placeholder="テスト太郎" />
                         </div>
-                        <div class="form_error">
-                            <!--バリデーション機能を実装したら記述します。-->
-                        </div>
+                        @error('name')
+                        <div class="form_error">{{$message}}</div>
+                        @enderror
                     </div>
                 </div>
                 <div class="form_group">
@@ -51,9 +52,9 @@
                         <div class="form_input-text">
                             <input type="email" name="email" placeholder="test@example.com" />
                         </div>
-                        <div class="form_error">
-                            <!--バリデーション機能を実装したら記述します。-->
-                        </div>
+                        @error('email')
+                        <div class="form_error">{{$message}}</div>
+                        @enderror
                     </div>
                 </div>
                 <div class="form_group">
@@ -62,11 +63,11 @@
                     </div>
                     <div class="form_group-content">
                         <div class="form_input-text">
-                            <input type="text" name="password" placeholder="パスワード" />
+                            <input type="password" name="password" placeholder="パスワード" />
                         </div>
-                        <div class="form_error">
-                            <!--バリデーション機能を実装したら記述します。-->
-                        </div>
+                        @error('password')
+                        <div class="form_error">{{$message}}</div>
+                        @enderror
                     </div>
                 </div>
                 <div class="form_button">
